@@ -22370,9 +22370,10 @@ namespace ts {
                     return getTypeWithFacts(type, facts);
                 }
                 if (assumeTrue) {
-                    const filterFn: (t: Type) => boolean = operator === SyntaxKind.EqualsEqualsToken ?
-                        (t => areTypesComparable(t, valueType) || isCoercibleUnderDoubleEquals(t, valueType)) :
-                        t => areTypesComparable(t, valueType);
+                    const filterFn: (t: Type) => boolean = operator === SyntaxKind.EqualsEqualsToken
+                        ? t => areTypesComparable(t, valueType) || isCoercibleUnderDoubleEquals(t, valueType)
+                        : t => areTypesComparable(t, valueType);
+
                     return replacePrimitivesWithLiterals(filterType(type, filterFn), valueType);
                 }
                 if (isUnitType(valueType)) {
