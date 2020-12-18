@@ -1,7 +1,9 @@
 /* @internal */
 namespace ts {
+    const {someBrandNewSuperCoolFunction} = require("./compiler/checker/something");
     const ambientModuleSymbolRegex = /^".+"$/;
     const anon = "(anonymous)" as __String & string;
+    console.log("this function runs as part of the compiler. it is a module", someBrandNewSuperCoolFunction());
 
     let nextSymbolId = 1;
     let nextNodeId = 1;

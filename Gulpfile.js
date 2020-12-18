@@ -393,6 +393,10 @@ task("lint").flags = {
     "   --ci": "Runs eslint additional rules",
 };
 
+const buildCompilerChecker = () => buildProject("src/compiler/checker");
+const cleanCompilerChecker = () => cleanProject("src/compiler/checker");
+cleanTasks.push(cleanCompilerChecker);
+
 const buildCancellationToken = () => buildProject("src/cancellationToken");
 const cleanCancellationToken = () => cleanProject("src/cancellationToken");
 cleanTasks.push(cleanCancellationToken);
@@ -425,7 +429,7 @@ const copyBuiltLocalDiagnosticMessages = () => src(diagnosticMessagesGeneratedJs
 const cleanBuiltLocalDiagnosticMessages = () => del(builtLocalDiagnosticMessagesGeneratedJson);
 cleanTasks.push(cleanBuiltLocalDiagnosticMessages);
 
-const buildOtherOutputs = parallel(buildCancellationToken, buildTypingsInstaller, buildWatchGuard, generateTypesMap, copyBuiltLocalDiagnosticMessages);
+const buildOtherOutputs = parallel(buildCancellationToken, buildTypingsInstaller, buildWatchGuard, generateTypesMap, copyBuiltLocalDiagnosticMessages, buildCompilerChecker);
 task("other-outputs", series(preBuild, buildOtherOutputs));
 task("other-outputs").description = "Builds miscelaneous scripts and documents distributed with the LKG";
 

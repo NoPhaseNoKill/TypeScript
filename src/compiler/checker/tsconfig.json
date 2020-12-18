@@ -1,0 +1,14 @@
+{
+    "extends": "../../tsconfig-base",
+    "compilerOptions": {
+        "outDir": "../../../built/local",
+        "types": ["node"]
+    },
+
+    "references": [
+        { "path": "../../shims" }
+    ],
+    "files": [
+        "something.ts"
+    ]
+}
