@@ -1,14 +1,14 @@
 {
     "extends": "../../tsconfig-base",
     "compilerOptions": {
-        "outDir": "../../../built/local",
+        "rootDir": ".",
+        "outDir": "../../../built/local/checker",
+        "moduleResolution": "node",
         "types": ["node"]
     },
 
     "references": [
         { "path": "../../shims" }
     ],
-    "files": [
-        "something.ts"
-    ]
+    "include": ["./**/*.ts"]
 }
