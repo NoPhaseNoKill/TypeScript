@@ -1,7 +1,6 @@
-import {TypeSystemPropertyName} from './test/TypeSystemPropertyName'
-
 /* @internal */
 namespace ts {
+    const {TypeSystemPropertyName} = require("./test/TypeSystemPropertyName")
     const {someBrandNewSuperCoolFunction} = require("./checker");
     const ambientModuleSymbolRegex = /^".+"$/;
     const anon = "(anonymous)" as __String & string;
