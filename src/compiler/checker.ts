@@ -1,7 +1,9 @@
 /* @internal */
 namespace ts {
-    const {TypeSystemPropertyName} = require("./test/TypeSystemPropertyName")
+    // const {TypeSystemPropertyName} = require("./test/TypeSystemPropertyName") as any as typeof import("./test/TypeSystemPropertyName");
+    // type TypeSystemPropertyName = import("./test/TypeSystemPropertyName").TypeSystemPropertyName;
     const {someBrandNewSuperCoolFunction} = require("./checker");
+
     const ambientModuleSymbolRegex = /^".+"$/;
     const anon = "(anonymous)" as __String & string;
     console.log("this function runs as part of the compiler. it is a module", someBrandNewSuperCoolFunction());

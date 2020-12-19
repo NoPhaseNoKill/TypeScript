@@ -78,6 +78,7 @@
         "watchPublic.ts",
         "tsbuild.ts",
         "tsbuildPublic.ts",
+        "checker/index.ts",
         "test/TypeSystemPropertyName.ts"
     ]
 }

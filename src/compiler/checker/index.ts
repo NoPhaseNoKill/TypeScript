@@ -1,1 +1,2 @@
-export {someBrandNewSuperCoolFunction} from "./something"
+export {someBrandNewSuperCoolFunction, TypeSystemPropertyName} from "./something"
+
