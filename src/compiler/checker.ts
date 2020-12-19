@@ -1,3 +1,5 @@
+import {TypeSystemPropertyName} from './test/TypeSystemPropertyName'
+
 /* @internal */
 namespace ts {
     const {someBrandNewSuperCoolFunction} = require("./checker");
@@ -162,16 +164,16 @@ namespace ts {
 
     type TypeSystemEntity = Node | Symbol | Type | Signature;
 
-    const enum TypeSystemPropertyName {
-        Type,
-        ResolvedBaseConstructorType,
-        DeclaredType,
-        ResolvedReturnType,
-        ImmediateBaseConstraint,
-        EnumTagType,
-        ResolvedTypeArguments,
-        ResolvedBaseTypes,
-    }
+    // const enum TypeSystemPropertyName {
+    //     Type,
+    //     ResolvedBaseConstructorType,
+    //     DeclaredType,
+    //     ResolvedReturnType,
+    //     ImmediateBaseConstraint,
+    //     EnumTagType,
+    //     ResolvedTypeArguments,
+    //     ResolvedBaseTypes,
+    // }
 
     const enum CheckMode {
         Normal = 0,                     // Normal type checking
